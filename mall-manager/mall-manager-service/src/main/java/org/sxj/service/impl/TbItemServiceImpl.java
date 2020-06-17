@@ -1,5 +1,6 @@
 package org.sxj.service.impl;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,8 @@ import org.sxj.pojo.TbItem;
 import org.sxj.pojo.TbItemExample;
 import org.sxj.service.TbItemService;
 import org.sxj.utils.EasyUIDataGridResult;
+import org.sxj.utils.FjnyResult;
+import org.sxj.utils.IDUtils;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -34,6 +37,19 @@ public class TbItemServiceImpl implements TbItemService {
 		long total =pageInfo.getTotal();
 		EasyUIDataGridResult easyUIDateGridResult=new EasyUIDataGridResult(list.size(),list);
 		return easyUIDateGridResult;
+	}
+
+	public FjnyResult saveTbItem(TbItem tbItem) {
+		long genItemd = IDUtils.genItemId();
+		tbItem.setId(genItemd);
+		tbItem.setCreated(new Date());
+		tbItem.setUpdated(new Date());	
+		tbItem.setStatus((byte)1);
+		int insertSelective = tbItemMapper.insertSelective(tbItem);
+		if (insertSelective < 0) {
+			return FjnyResult.build(500,"添加商品失败");
+		}
+		return FjnyResult.ok(tbItem);
 	}
 
 }

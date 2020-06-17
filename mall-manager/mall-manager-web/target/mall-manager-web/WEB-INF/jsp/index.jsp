@@ -20,6 +20,7 @@
 		<script type="text/javascript" charset="utf-8" src="easyui/themes/super/super.js"></script>
 		<link rel="stylesheet" href="easyui/themes/super/css/font-awesome.min.css">
 		
+		<script src="src/main/webapp/WEB-INF/js/common.js" type="text/javascript" charset="utf-8"></script>
 	
 		<script src="js/superDemo.js" type="text/javascript" charset="utf-8"></script>
 	</head>
@@ -63,43 +64,11 @@
 		<div data-options="region:'west',title:'MAIN NAVIGATION',border:false" class="super-west">
 			<!--左侧导航-->
 			<div class="easyui-accordion" data-options="border:false,fit:true,selected:true">
-				<div title="布局" data-options="iconCls:'fa fa-desktop'" >
-					<ul>
-						<li data-url='example/panel.html'>面板</li>
-						<li data-url='example/tabs.html'>选项卡</li>
-						<li data-url='example/accordion.html'>分类</li>
-						<li data-url='example/layout.html'>布局</li>
-					</ul>
-				</div>
-				<div title="基本元素" data-options="iconCls:'fa fa-wpforms'">
-					<ul>
-						<li data-url='example/button.html'>按钮</li>
-						<li data-url='example/form.html'>表单</li>
-						<li data-url="example/menu.html">菜单</li>
-						<li data-url='example/other.html'>其他</li>
-					</ul>
-				</div>
-				<div title="窗口" data-options="iconCls:'fa fa-window-maximize'">
-					<ul>
-						<li data-url='example/window.html'>窗口</li>
-						<li data-url='example/dialog.html'>对话框</li>
-						<li data-url="example/message.html">消息窗口</li>
-					</ul>
-				</div>
-				<div title="表格和树" data-options="iconCls:'fa fa-table'">
-					<ul>
-						<li data-url='example/datagrid.html'>表格</li>
-						<li data-url='example/tree.html'>树</li>
-					</ul>
-				</div>
-				<div title="扩展" data-options="iconCls:'fa fa-sitemap'">
-					<ul>
-						<li data-url='pagination.html'>嘿嘿嘿</li>
-					</ul>
-				</div>
+				
 				<div title="商品管理" data-options="iconCls:'fa fa-table'">
 					<ul>
 						<li data-url='item-list'>商品列表</li>
+						<li data-url='item-add'>添加商品</li>
 					</ul>
 				</div>
 			</div>

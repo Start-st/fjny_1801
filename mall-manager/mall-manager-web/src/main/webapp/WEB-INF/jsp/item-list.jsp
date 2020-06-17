@@ -8,13 +8,13 @@
 </head>
 <body><div class="super-theme-example">
 			<div style="height: 500px;">
-				<table id="dg"></table>
+				<table id="dgTbItem"></table>
 			</div>
 			<br /><br />
 			<table id="pg" style="width:300px"></table>
 		</div>
 		<script type="text/javascript">
-		$('#dg').datagrid({
+		$('#dgTbItem').datagrid({
 			url: 'item/getItem',
 			fit: true,
 			pagination: true,
@@ -41,26 +41,74 @@
 			columns: [
 				[{
 					field: 'id',
-					title: 'id',
+					title: '商品id',
 					width: 100,
-					sortable: true
+					sortable: true,
+					align: 'center',
 				}, {
 					field: 'title',
-					title: '标题',
+					title: '商品标题',
 					width: 100,
 					sortable: true
+				},  {
+					field: 'sell_point',
+					title: '商品卖点',
+					width: 100,
+					sortable: true
+					
 				}, {
-					field: 'price',
-					title: '价格',
+					field: 'num',
+					title: '库存数量',
 					width: 100,
-					align: 'right',
-					sortable: true
+					sortable: true,
+					align: 'center',
+				}, {
+					field: 'barcode',
+					title: '商品条形码',
+					width: 100,
+					sortable: true,
+					align: 'center',
+				
+				},{
+					field: 'price',
+					title: '商品价格',
+					width: 100,
+					align: 'center',
+					sortable: true,
+					formatter:TT.formatPrice
 				}, {
 					field: 'image',
-					title: '图片',
+					title: '商品图片',
+					width: 300,
+					align: 'center',
+					formatter:function(value,row){
+						return"<img src="+value+" width='100px' height='100px'>"
+					}
+				},{
+					field: 'cid',
+					title: '商品类目',
 					width: 100,
-					align: 'right'
-				}]
+					align: 'center'
+				},{
+					field: 'status',
+					title: '商品状态',
+					width: 100,
+					align: 'center',
+					formatter:TT.formatItemStatus
+				},{
+					field: 'created',
+					title: '创建时间',
+					width: 100,
+					align: 'center',
+					formatter:TT.formatDateTime
+				},{
+					field: 'update',
+					title: '更新时间',
+					width: 100,
+					align: 'center',
+					formatter:TT.formatDateTime
+				},
+				]
 			]
 		});
 		/*---------------属性表格*/
