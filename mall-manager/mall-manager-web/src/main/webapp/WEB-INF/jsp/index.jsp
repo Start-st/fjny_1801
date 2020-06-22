@@ -19,6 +19,8 @@
 		<link rel="stylesheet" type="text/css" href="easyui/themes/super/superBlue.css" id="themeCss"/>
 		<script type="text/javascript" charset="utf-8" src="easyui/themes/super/super.js"></script>
 		<link rel="stylesheet" href="easyui/themes/super/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/fjny.css">
+		
 		<script src="js/superDemo.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
 	</head>
@@ -28,7 +30,7 @@
 			<!--顶部-->
 			<div class="super-navigation">
 				<!--系统名称-->
-				<div class="super-navigation-title">SUPER THEME</div>
+				<div class="super-navigation-title">1801 XIONGJIE SHI</div>
 				<!--自定义导航-->
 				<div class="super-navigation-main">
 					<div class="super-setting-left">
@@ -67,6 +69,7 @@
 					<ul>
 						<li id="item-list" data-url='item-list'>商品列表</li>
 						<li id="item-add" data-url='item-add'>添加商品</li>
+						<li id="item-param-list" data-url='item-param-list'>商品规格</li>
 					</ul>
 				</div>
 			</div>
@@ -84,7 +87,7 @@
 		<div data-options="region:'south'" class="super-south">
 			<!--页脚-->
 			<div class="super-footer-info">
-				<span><i class="fa fa-info-circle"></i> 作者：tianyu</span>
+				<span><i class="fa fa-info-circle"></i> 作者：施雄杰</span>
 				<span><i class="fa fa-copyright"></i> CopyRight 2017 版权所有 <i class="fa fa-caret-right"></i></span>
 			</div>
 		</div>

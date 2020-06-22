@@ -8,13 +8,13 @@
 </head>
 <body><div class="super-theme-example">
 			<div style="height: 500px;">
-				<table id="dg"></table>
+				<table id="dgTbItem"></table>
 			</div>
 			<br /><br />
 			<table id="pg" style="width:300px"></table>
 		</div>
 		<script type="text/javascript">
-		$('#dg').datagrid({
+		$('#dgTbItem').datagrid({
 			url: 'item/getItem',
 			fit: true,
 			pagination: true,
@@ -105,7 +105,8 @@
 					field: 'update',
 					title: '更新时间',
 					width: 100,
-					align: 'center'
+					align: 'center',
+					formatter:TT.formatDateTime
 				},
 				]
 			]

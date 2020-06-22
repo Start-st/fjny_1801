@@ -2,7 +2,7 @@ package org.sxj.pojo;
 
 import java.util.Date;
 
-public class TbItemParam {
+public class TbItemParam extends TbItemParamExt {
     private Long id;
 
     private Long itemCatId;

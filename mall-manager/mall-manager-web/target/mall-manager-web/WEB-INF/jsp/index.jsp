@@ -19,10 +19,8 @@
 		<link rel="stylesheet" type="text/css" href="easyui/themes/super/superBlue.css" id="themeCss"/>
 		<script type="text/javascript" charset="utf-8" src="easyui/themes/super/super.js"></script>
 		<link rel="stylesheet" href="easyui/themes/super/css/font-awesome.min.css">
-		
-		<script src="src/main/webapp/WEB-INF/js/common.js" type="text/javascript" charset="utf-8"></script>
-	
 		<script src="js/superDemo.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
 	<body id="main" class="easyui-layout">
@@ -67,8 +65,8 @@
 				
 				<div title="商品管理" data-options="iconCls:'fa fa-table'">
 					<ul>
-						<li data-url='item-list'>商品列表</li>
-						<li data-url='item-add'>添加商品</li>
+						<li id="item-list" data-url='item-list'>商品列表</li>
+						<li id="item-add" data-url='item-add'>添加商品</li>
 					</ul>
 				</div>
 			</div>

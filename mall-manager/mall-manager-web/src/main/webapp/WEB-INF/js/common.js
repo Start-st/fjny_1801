@@ -59,7 +59,7 @@ var TT = FJNY = {
         } else if(val == 2){
         	return '<span style="color:red;">下架</span>';
         } else {
-        	return '未知';
+        	return '已删除';
         }
     },
     
@@ -98,7 +98,7 @@ var TT = FJNY = {
 							var imgArray = [];
 							KindEditor.each(urlList, function(i, data) {
 								imgArray.push(data.url);
-								form.find(".pics ul").append("<li><a href='"+data.url+"' target='_blank'><img src='"+data.url+"' width='80' height='50' /></a></li>");
+								form.find(".pics ul").append("<li style=\"float: left;\"><a href='"+data.url+"' target='_blank'><img src='"+data.url+"' width='80' height='50' /></a></li>");
 							});
 							form.find("[name=image]").val(imgArray.join(","));
 							editor.hideDialog();
@@ -216,10 +216,10 @@ var TT = FJNY = {
 					 html+="</li></table>";
 				 }
 				 html+= "</ul>";
-				 $("#"+formId+" .params td").eq(1).html(html);
+				 $("#"+formId+" .params div").html(html);
 			  }else{
 				 $("#"+formId+" .params").hide();
-				 $("#"+formId+" .params td").eq(1).empty();
+				 $("#"+formId+" .params td").empty();
 			  }
 		  });
     },
